@@ -6,7 +6,7 @@ const Footer = () => {
         je projekt u svrhu obrazovanja i nije namijenjena za komercijalnu
         upotrebu. Igra se temelji na Unmatched Card Game.
       </p>
-      <p>Created by Reattera</p>
+      <p>Made by Reattera</p>
     </div>
   );
 };

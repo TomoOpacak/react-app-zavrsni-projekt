@@ -1,9 +1,10 @@
 import React from "react";
+import UnmatchedLogo from "./UnmatcheLogo";
 
 function CharacterSelector({ characters, selectedId, onSelect }) {
   return (
     <div className="character-selector-container">
-      <h2 className="character-selector-title">THE UNMATCHED</h2>
+      <UnmatchedLogo />
       <p className="character-selector-subtitle">Brojčanici zdravlja</p>
       <div className="character-selector">
         {characters.map((character) => (

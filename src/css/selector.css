@@ -14,7 +14,7 @@
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 .character-selector-subtitle {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   color: silver;
   text-align: center;
@@ -74,7 +74,7 @@
   max-height: 1000px;
   opacity: 1;
   overflow: hidden;
-  padding: 20px 0;
+  margin-bottom: 10px;
   transition: max-height 0.6s ease-in-out, opacity 0.4s ease-in-out,
     padding 0.4s ease-in-out, margin 0.4s ease-in-out;
 }
