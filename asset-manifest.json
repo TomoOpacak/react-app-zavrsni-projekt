@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-app-zavrsni-projekt/static/css/main.5c6d7790.css",
-    "main.js": "/react-app-zavrsni-projekt/static/js/main.31c3d135.js",
+    "main.css": "/react-app-zavrsni-projekt/static/css/main.2fe95611.css",
+    "main.js": "/react-app-zavrsni-projekt/static/js/main.2bbf838a.js",
     "static/js/453.01d26f34.chunk.js": "/react-app-zavrsni-projekt/static/js/453.01d26f34.chunk.js",
     "static/media/philipa_hero.webp": "/react-app-zavrsni-projekt/static/media/philipa_hero.475ca658eff96a1d1b7c.webp",
     "static/media/yen.webp": "/react-app-zavrsni-projekt/static/media/yen.4b1950dbeddb2d432b8b.webp",
@@ -16,12 +16,12 @@
     "static/media/click.mp3": "/react-app-zavrsni-projekt/static/media/click.1242867580766cf578bc.mp3",
     "static/media/djikstra_side.webp": "/react-app-zavrsni-projekt/static/media/djikstra_side.4b49b8cff1189234178b.webp",
     "index.html": "/react-app-zavrsni-projekt/index.html",
-    "main.5c6d7790.css.map": "/react-app-zavrsni-projekt/static/css/main.5c6d7790.css.map",
-    "main.31c3d135.js.map": "/react-app-zavrsni-projekt/static/js/main.31c3d135.js.map",
+    "main.2fe95611.css.map": "/react-app-zavrsni-projekt/static/css/main.2fe95611.css.map",
+    "main.2bbf838a.js.map": "/react-app-zavrsni-projekt/static/js/main.2bbf838a.js.map",
     "453.01d26f34.chunk.js.map": "/react-app-zavrsni-projekt/static/js/453.01d26f34.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c6d7790.css",
-    "static/js/main.31c3d135.js"
+    "static/css/main.2fe95611.css",
+    "static/js/main.2bbf838a.js"
   ]
 }
