@@ -21,7 +21,7 @@ const AnimatedButton = ({
 
       setTimeout(() => {
         if (btn) btn.classList.remove("clicked");
-      }, 150);
+      }, 125);
     }
 
     if (sound) {

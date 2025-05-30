@@ -27,6 +27,13 @@ function CharacterSelector({ characters, selectedId, onSelect }) {
           </div>
         ))}
       </div>
+      <p>
+        <svg className="pick-hero" viewBox="0 0 500 100">
+          <text x="50%" y="50%">
+            Odaberi heroja i započni igru!
+          </text>
+        </svg>
+      </p>
     </div>
   );
 }

@@ -63,7 +63,7 @@ const App = () => {
     setTimeout(() => {
       newAnimations[index] = { animate: false, type: null };
       setHeroAnimations([...newAnimations]);
-    }, 300);
+    }, 250);
   };
 
   const updateSidekickHP = (index, newHP) => {
@@ -85,7 +85,7 @@ const App = () => {
     setTimeout(() => {
       newAnimations[index] = { animate: false, type: null };
       setSidekickAnimations([...newAnimations]);
-    }, 300);
+    }, 250);
   };
 
   const resetGame = () => {
@@ -300,15 +300,7 @@ const App = () => {
             />
           )}
         </>
-      ) : (
-        <p>
-          <svg className="pick-hero" viewBox="0 0 500 100">
-            <text x="50%" y="60%">
-              Odaberi heroja i započni igru!
-            </text>
-          </svg>
-        </p>
-      )}
+      ) : null}
       <footer>
         <Footer />
       </footer>
