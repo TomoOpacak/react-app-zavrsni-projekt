@@ -25,9 +25,16 @@
   -webkit-user-drag: none;
 }
 
-.character-container {
+.character-header {
+  height: 85vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.character-container {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
@@ -69,7 +76,7 @@
   display: inline-block;
 }
 
-.character-dial {
+.health-dial {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -129,6 +136,17 @@
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
+}
+
+.heart-svg {
+  width: 110px;
+  height: 110px;
+  transition: transform 0.3s ease;
+  /* animation: smoothPulse 1.5s ease-in-out infinite;  STALNO PULSIRANJE , MOŽDA JE PREVIŠE??*/
+}
+
+.heart-svg:hover {
+  transform: scale(1.15);
 }
 
 @keyframes pulseOutwards {
@@ -232,39 +250,14 @@
   font-family: "Segoe UI", sans-serif;
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 48px;
+  border-radius: 32px;
   cursor: pointer;
   margin: 24px 0;
-  padding: 20px;
+  padding: 16px 24px;
 }
 
 .rpg-button:hover {
   background-color: #3b3b3b;
-}
-
-.pick-hero {
-  width: 500px;
-  height: 100px;
-  animation: smoothPulse 1.5s ease-in-out infinite;
-  margin-top: 20px;
-  dominant-baseline: middle;
-  text-anchor: middle;
-  font-size: 32px;
-  font-weight: bold;
-  fill: gold;
-  stroke: black;
-  stroke-width: 3;
-  paint-order: stroke;
-}
-
-@keyframes smoothPulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.08);
-  }
 }
 
 @keyframes clickPress {
@@ -292,16 +285,6 @@
   transform: translateY(-6px) scale(1.05) rotateZ(-2deg);
 }
 
-.heart-svg {
-  width: 110px;
-  height: 110px;
-  transition: transform 0.3s ease;
-}
-
-.heart-svg:hover {
-  transform: scale(1.15);
-}
-
 .swap-button {
   width: 40px;
   height: 40px;
@@ -326,8 +309,7 @@
 
 footer {
   width: 100%;
-  height: 150px;
-
+  height: 15vh;
   font-size: 14px;
   color: #aaa;
   text-align: center;
@@ -349,7 +331,9 @@ footer {
     width: 100%;
     height: 100%;
   }
-
+  .character-header {
+    height: 100%;
+  }
   .character-container {
     flex-direction: column;
   }
@@ -395,6 +379,7 @@ footer {
     gap: 0px;
   }
   footer {
+    height: 150px;
     p {
       font-size: 12px;
       width: 90%;

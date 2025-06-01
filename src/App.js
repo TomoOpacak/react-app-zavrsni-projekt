@@ -144,152 +144,154 @@ const App = () => {
 
       {selectedCharacter ? (
         <>
-          <button
-            className="back-button"
-            onClick={() => {
-              setSelectedId(null);
-              localStorage.setItem("selectedId", "null");
-            }}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="icon-style">
-              <polyline points="9 18 3 12 9 6" />
-              <path d="M3 12h12a6 6 0 0 1 0 12" />
-            </svg>
-          </button>
+          <div className="character-header">
+            <button
+              className="back-button"
+              onClick={() => {
+                setSelectedId(null);
+                localStorage.setItem("selectedId", "null");
+              }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="icon-style">
+                <polyline points="9 18 3 12 9 6" />
+                <path d="M3 12h12a6 6 0 0 1 0 12" />
+              </svg>
+            </button>
 
-          <div className="character-container">
-            {selectedCharacter.heroes.map((hero, index) => (
-              <div key={index}>
-                <div className="small-character-container">
-                  <div className="x-position">
-                    {heroHPs[index] === 0 && <DeadCharacterOverlay />}
-                    <img
-                      className="main-character-image"
-                      src={hero.image}
-                      alt={hero.name}
-                      style={{
-                        border: `4px solid ${hero.color}`,
-                      }}
-                    />
+            <div className="character-container">
+              {selectedCharacter.heroes.map((hero, index) => (
+                <div key={index}>
+                  <div className="small-character-container">
+                    <div className="x-position">
+                      {heroHPs[index] === 0 && <DeadCharacterOverlay />}
+                      <img
+                        className="main-character-image"
+                        src={hero.image}
+                        alt={hero.name}
+                        style={{
+                          border: `4px solid ${hero.color}`,
+                        }}
+                      />
+                    </div>
+                    <p>
+                      <svg width="160" height="40" viewBox="0 0 160 40">
+                        <text x="50%" y="50%" className="name-text">
+                          {hero.name}
+                        </text>
+                      </svg>
+                    </p>
                   </div>
-                  <p>
-                    <svg width="160" height="40" viewBox="0 0 160 40">
-                      <text x="50%" y="50%" className="name-text">
-                        {hero.name}
-                      </text>
-                    </svg>
-                  </p>
-                </div>
-                <TypeIcon type={hero.type} />
-                <div className="character-dial">
-                  <AnimatedButton
-                    className="hp-button"
-                    onClick={() => updateHeroHP(index, heroHPs[index] - 1)}
-                    disabled={heroHPs[index] <= 0}
-                  >
-                    <svg viewBox="0 0 24 24">
-                      <text x="12" y="15">
-                        −
-                      </text>
-                    </svg>
-                  </AnimatedButton>
-                  <HeartHP
-                    hp={heroHPs[index]}
-                    animate={heroAnimations[index]?.animate}
-                    damageOrHeal={heroAnimations[index]?.type}
-                    color={hero.color}
-                  />
-                  <AnimatedButton
-                    className="hp-button"
-                    onClick={() => updateHeroHP(index, heroHPs[index] + 1)}
-                    disabled={heroHPs[index] === hero.hp}
-                  >
-                    <svg viewBox="0 0 24 24">
-                      <text x="12" y="15">
-                        +
-                      </text>
-                    </svg>
-                  </AnimatedButton>
-                </div>
-              </div>
-            ))}
-            {selectedCharacter.id === 4 && (
-              <div>
-                <button
-                  className="swap-button"
-                  onClick={swapYenTriss}
-                  title="Zamijeni Triss i Yennefer"
-                >
-                  <svg className="icon-style">
-                    <path d="M4 7h11M4 7l4-4M4 7l4 4M20 17H9m11 0l-4 4m4-4l-4-4" />
-                  </svg>
-                </button>
-              </div>
-            )}
-            {selectedCharacter.sidekicks.map((sidekick, index) => (
-              <div key={index}>
-                <div className="small-character-container">
-                  <div className="x-position">
-                    {sidekickHPs[index] === 0 && <DeadCharacterOverlay />}
-                    <img
-                      className="sidekick-image"
-                      src={sidekick.image}
-                      alt={sidekick.name}
-                      style={{
-                        border: `4px solid ${sidekick.color}`,
-                      }}
+                  <TypeIcon type={hero.type} />
+                  <div className="health-dial">
+                    <AnimatedButton
+                      className="hp-button"
+                      onClick={() => updateHeroHP(index, heroHPs[index] - 1)}
+                      disabled={heroHPs[index] <= 0}
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <text x="12" y="15">
+                          −
+                        </text>
+                      </svg>
+                    </AnimatedButton>
+                    <HeartHP
+                      hp={heroHPs[index]}
+                      animate={heroAnimations[index]?.animate}
+                      damageOrHeal={heroAnimations[index]?.type}
+                      color={hero.color}
                     />
+                    <AnimatedButton
+                      className="hp-button"
+                      onClick={() => updateHeroHP(index, heroHPs[index] + 1)}
+                      disabled={heroHPs[index] === hero.hp}
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <text x="12" y="15">
+                          +
+                        </text>
+                      </svg>
+                    </AnimatedButton>
                   </div>
-                  <p>
-                    <svg width="160" height="40" viewBox="0 0 160 40">
-                      <text x="50%" y="50%" className="name-text">
-                        {sidekick.name}
-                      </text>
-                    </svg>
-                  </p>
                 </div>
-                <TypeIcon type={sidekick.type} />
-                <div className="character-dial">
-                  <AnimatedButton
-                    className="hp-button"
-                    onClick={() =>
-                      updateSidekickHP(index, sidekickHPs[index] - 1)
-                    }
-                    disabled={sidekickHPs[index] <= 0}
+              ))}
+              {selectedCharacter.id === 4 && (
+                <div>
+                  <button
+                    className="swap-button"
+                    onClick={swapYenTriss}
+                    title="Zamijeni Triss i Yennefer"
                   >
-                    <svg viewBox="0 0 24 24">
-                      <text x="12" y="15">
-                        −
-                      </text>
+                    <svg className="icon-style">
+                      <path d="M4 7h11M4 7l4-4M4 7l4 4M20 17H9m11 0l-4 4m4-4l-4-4" />
                     </svg>
-                  </AnimatedButton>
-                  <HeartHP
-                    hp={sidekickHPs[index]}
-                    animate={sidekickAnimations[index]?.animate}
-                    damageOrHeal={sidekickAnimations[index]?.type}
-                    color={sidekick.color}
-                  />
-                  <AnimatedButton
-                    className="hp-button"
-                    onClick={() =>
-                      updateSidekickHP(index, sidekickHPs[index] + 1)
-                    }
-                    disabled={sidekickHPs[index] === sidekick.hp}
-                  >
-                    <svg viewBox="0 0 24 24">
-                      <text x="12" y="15">
-                        +
-                      </text>
-                    </svg>
-                  </AnimatedButton>
+                  </button>
                 </div>
-              </div>
-            ))}
+              )}
+              {selectedCharacter.sidekicks.map((sidekick, index) => (
+                <div key={index}>
+                  <div className="small-character-container">
+                    <div className="x-position">
+                      {sidekickHPs[index] === 0 && <DeadCharacterOverlay />}
+                      <img
+                        className="sidekick-image"
+                        src={sidekick.image}
+                        alt={sidekick.name}
+                        style={{
+                          border: `4px solid ${sidekick.color}`,
+                        }}
+                      />
+                    </div>
+                    <p>
+                      <svg width="160" height="40" viewBox="0 0 160 40">
+                        <text x="50%" y="50%" className="name-text">
+                          {sidekick.name}
+                        </text>
+                      </svg>
+                    </p>
+                  </div>
+                  <TypeIcon type={sidekick.type} />
+                  <div className="health-dial">
+                    <AnimatedButton
+                      className="hp-button"
+                      onClick={() =>
+                        updateSidekickHP(index, sidekickHPs[index] - 1)
+                      }
+                      disabled={sidekickHPs[index] <= 0}
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <text x="12" y="15">
+                          −
+                        </text>
+                      </svg>
+                    </AnimatedButton>
+                    <HeartHP
+                      hp={sidekickHPs[index]}
+                      animate={sidekickAnimations[index]?.animate}
+                      damageOrHeal={sidekickAnimations[index]?.type}
+                      color={sidekick.color}
+                    />
+                    <AnimatedButton
+                      className="hp-button"
+                      onClick={() =>
+                        updateSidekickHP(index, sidekickHPs[index] + 1)
+                      }
+                      disabled={sidekickHPs[index] === sidekick.hp}
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <text x="12" y="15">
+                          +
+                        </text>
+                      </svg>
+                    </AnimatedButton>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <button className="rpg-button" onClick={() => setShowModal(true)}>
+              Završi igru
+            </button>
           </div>
-
-          <button className="rpg-button" onClick={() => setShowModal(true)}>
-            Završi igru
-          </button>
           {showModal && (
             <ConfirmationModal
               onConfirm={() => {
