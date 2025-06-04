@@ -64,7 +64,6 @@ const characters = [
     id: 4,
     name: "Yennefer & Triss",
     image: triss_yen,
-    color: "#dc811a",
     heroes: [
       {
         name: "Yennefer",
@@ -110,10 +109,7 @@ const characters = [
   {
     id: 6,
     name: "Eredin",
-    type: "melee",
     image: eredin,
-    hp: 14,
-    color: "#454351",
     heroes: [
       {
         name: "Eredin",

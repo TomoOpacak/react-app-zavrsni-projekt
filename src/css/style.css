@@ -223,7 +223,7 @@
   border: 2px solid white;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
-  margin: 1rem auto;
+  margin: 16px auto;
   margin-top: 20px;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
@@ -296,7 +296,7 @@
   border: 2px solid white;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
-  margin: 1rem auto;
+  margin: 16px auto;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
   position: relative;
   top: -100px;
