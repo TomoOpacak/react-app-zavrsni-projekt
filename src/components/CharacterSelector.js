@@ -5,7 +5,13 @@ function CharacterSelector({ characters, selectedId, onSelect }) {
   return (
     <div className="character-selector-container">
       <UnmatchedLogo />
-      <p className="character-selector-subtitle">Brojčanici zdravlja</p>
+      <p>
+        <svg className="character-selector-title" viewBox="0 0 400 50">
+          <text x="50%" y="50%">
+            Brojčanici zdravlja
+          </text>
+        </svg>
+      </p>
       <div className="character-selector">
         {characters.map((character) => (
           <div

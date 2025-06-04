@@ -26,7 +26,7 @@
 }
 
 .character-header {
-  height: 85vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -155,7 +155,7 @@
   }
   50% {
     transform: scale(1.3);
-  } /* Expand the heart outwards */
+  }
   100% {
     transform: scale(1);
   }
@@ -167,7 +167,7 @@
   }
   50% {
     transform: scale(0.7);
-  } /* Shrink the heart inwards */
+  }
   100% {
     transform: scale(1);
   }
@@ -219,11 +219,11 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #444; /* or your preferred accent */
+  background-color: #444;
   border: 2px solid white;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
-  margin: 1rem auto; /* center horizontally */
+  margin: 1rem auto;
   margin-top: 20px;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
@@ -289,14 +289,14 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #444; /* or your preferred accent */
+  background-color: #444;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid white;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
-  margin: 1rem auto; /* center horizontally */
+  margin: 1rem auto;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
   position: relative;
   top: -100px;
@@ -309,11 +309,10 @@
 
 footer {
   width: 100%;
-  height: 15vh;
   font-size: 14px;
   color: #aaa;
   text-align: center;
-  padding: 10px;
+  padding: 18px;
   background-color: #000000;
   display: flex;
   justify-content: center;
@@ -324,6 +323,10 @@ footer {
   }
 }
 
+.author {
+  font-style: italic;
+  margin-top: 8px;
+}
 /* RESPONZIVNI DIZAJN */
 
 @media (max-width: 768px) {
@@ -379,7 +382,6 @@ footer {
     gap: 0px;
   }
   footer {
-    height: 150px;
     p {
       font-size: 12px;
       width: 90%;

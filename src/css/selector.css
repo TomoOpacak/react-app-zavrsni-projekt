@@ -4,21 +4,18 @@
   justify-content: center;
   gap: 20px;
   padding: 0px 20px;
-  margin-top: 20px;
 }
+
 .character-selector-title {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  dominant-baseline: middle;
+  text-anchor: middle;
   font-size: 32px;
   font-weight: bold;
-  color: silver;
-  text-align: center;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-}
-.character-selector-subtitle {
-  font-size: 30px;
-  font-weight: bold;
-  color: silver;
-  text-align: center;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  fill: silver;
+  stroke: black;
+  stroke-width: 4;
+  paint-order: stroke;
 }
 
 .character-name {
